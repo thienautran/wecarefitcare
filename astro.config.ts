@@ -9,6 +9,7 @@ import mdx from '@astrojs/mdx';
 import partytown from '@astrojs/partytown';
 import icon from 'astro-icon';
 import compress from 'astro-compress';
+import react from '@astrojs/react';
 import type { AstroIntegration } from 'astro';
 
 import astrowind from './vendor/integration';
@@ -25,6 +26,7 @@ export default defineConfig({
   output: 'static',
 
   integrations: [
+    react(),
     tailwind({
       applyBaseStyles: false,
     }),
@@ -72,7 +74,7 @@ export default defineConfig({
   ],
 
   image: {
-    domains: ['cdn.pixabay.com'],
+    domains: ['cdn.pixabay.com', 'images.unsplash.com'],
   },
 
   markdown: {
