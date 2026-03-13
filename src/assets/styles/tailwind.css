@@ -6,6 +6,29 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    /* ─── Brand palette (purple-based) ─── */
+    --wcfc-brand-50: 250 245 255;
+    --wcfc-brand-100: 243 232 255;
+    --wcfc-brand-200: 233 213 255;
+    --wcfc-brand-300: 216 180 254;
+    --wcfc-brand-400: 192 132 252;
+    --wcfc-brand-500: 168 85 247;
+    --wcfc-brand-600: 147 51 234;
+    --wcfc-brand-700: 126 34 206;
+    --wcfc-brand-800: 107 33 168;
+
+    /* ─── Accent palette (blue-based) ─── */
+    --wcfc-accent-50: 239 246 255;
+    --wcfc-accent-100: 219 234 254;
+    --wcfc-accent-200: 191 219 254;
+    --wcfc-accent-300: 147 197 253;
+    --wcfc-accent-400: 96 165 250;
+    --wcfc-accent-500: 59 130 246;
+    --wcfc-accent-600: 37 99 235;
+    --wcfc-accent-700: 29 78 216;
+  }
+
   html {
     scroll-behavior: smooth;
     overflow-x: hidden;
@@ -55,11 +78,30 @@
   .text-muted {
     color: var(--aw-color-text-muted);
   }
+
+  /* ─── Hero text shadows for legibility over images ─── */
+  .text-shadow-hero {
+    text-shadow: 0 4px 24px rgba(0, 0, 0, 0.6);
+  }
+  .text-shadow-hero-md {
+    text-shadow: 0 3px 16px rgba(0, 0, 0, 0.5);
+  }
+  .text-shadow-hero-sm {
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  /* ─── CTA glow using brand/accent palette ─── */
+  .shadow-cta-glow {
+    box-shadow:
+      0 0 24px rgb(var(--wcfc-brand-600) / 0.35),
+      0 0 48px rgb(var(--wcfc-accent-600) / 0.2),
+      0 4px 16px rgba(0, 0, 0, 0.3);
+  }
 }
 
 @layer components {
   .btn {
-    @apply inline-flex items-center justify-center rounded-full border-gray-400 border bg-transparent font-medium text-center text-base text-page leading-snug transition py-3.5 px-6 md:px-8 ease-in duration-200 focus:ring-blue-500 focus:ring-offset-blue-200 focus:ring-2 focus:ring-offset-2 hover:bg-gray-100 hover:border-gray-600 cursor-pointer font-sans;
+    @apply inline-flex items-center justify-center rounded-full border-gray-400 border bg-transparent font-medium text-center text-base text-page leading-snug transition py-3.5 px-6 md:px-8 ease-in duration-200 focus:ring-accent-500 focus:ring-offset-accent-200 focus:ring-2 focus:ring-offset-2 hover:bg-gray-100 hover:border-gray-600 cursor-pointer font-sans;
   }
 
   .btn-primary {

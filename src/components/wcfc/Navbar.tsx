@@ -3,9 +3,11 @@ import { motion, AnimatePresence } from 'motion/react';
 
 const NAV_LINKS = [
   { label: 'Home', href: '#home' },
-  { label: 'About', href: '#about' },
-  { label: 'Meet the Team', href: '#meet-the-team' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Who We Are', href: '#who-we-are' },
+  { label: 'Our Services', href: '#services' },
+  { label: 'What You Get', href: '#what-you-get' },
+  { label: 'Testimonials', href: '#testimonials' },
+  { label: 'Contact Us', href: '#contact' },
 ];
 
 export default function Navbar() {
@@ -52,7 +54,7 @@ export default function Navbar() {
       id="wcfc-header"
       className={[
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
-        scrolled ? 'bg-white/95 backdrop-blur-md shadow-sm shadow-purple-100' : 'bg-transparent',
+        scrolled ? 'bg-white/95 backdrop-blur-md shadow-sm shadow-brand-100' : 'bg-transparent',
       ].join(' ')}
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -64,7 +66,7 @@ export default function Navbar() {
             className="flex items-center gap-2 group"
             aria-label="We Care Fit Care - Home"
           >
-            <span className="font-heading font-extrabold text-2xl sm:text-3xl tracking-tight bg-gradient-to-r from-purple-700 to-blue-600 bg-clip-text text-transparent leading-none">
+            <span className="font-heading font-extrabold text-2xl sm:text-3xl tracking-tight bg-gradient-to-r from-brand-700 to-accent-600 bg-clip-text text-transparent leading-none">
               WCFC
             </span>
           </a>
@@ -76,7 +78,7 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.href)}
-                className="font-sans font-medium text-sm px-4 py-2.5 rounded-full text-slate-700 hover:text-purple-700 hover:bg-purple-50 transition-all duration-200 whitespace-nowrap"
+                className="font-sans font-medium text-sm px-4 py-2.5 rounded-full text-slate-700 hover:text-brand-700 hover:bg-brand-50 transition-all duration-200 whitespace-nowrap"
               >
                 {link.label}
               </a>
@@ -84,7 +86,7 @@ export default function Navbar() {
             <a
               href="#contact"
               onClick={(e) => handleNavClick(e, '#contact')}
-              className="ml-3 font-sans font-semibold text-sm px-5 py-2.5 rounded-full bg-gradient-to-r from-purple-700 to-blue-600 text-white hover:opacity-90 transition-opacity duration-200 shadow-sm whitespace-nowrap"
+              className="ml-3 font-sans font-semibold text-sm px-5 py-2.5 rounded-full bg-gradient-to-r from-brand-700 to-accent-600 text-white hover:opacity-90 transition-opacity duration-200 shadow-sm whitespace-nowrap"
             >
               Get in Touch
             </a>
@@ -92,7 +94,7 @@ export default function Navbar() {
 
           {/* Mobile Hamburger */}
           <button
-            className="lg:hidden flex items-center justify-center w-11 h-11 rounded-xl text-slate-700 hover:bg-purple-50 hover:text-purple-700 transition-colors duration-200"
+            className="lg:hidden flex items-center justify-center w-11 h-11 rounded-xl text-slate-700 hover:bg-brand-50 hover:text-brand-700 transition-colors duration-200"
             onClick={() => setIsOpen(!isOpen)}
             aria-label={isOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={isOpen}
@@ -137,7 +139,7 @@ export default function Navbar() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.2, ease: 'easeOut' }}
-              className="absolute top-full left-0 right-0 bg-white/98 backdrop-blur-md shadow-lg border-t border-purple-50 z-50 lg:hidden"
+              className="absolute top-full left-0 right-0 bg-white/98 backdrop-blur-md shadow-lg border-t border-brand-50 z-50 lg:hidden"
               aria-label="Mobile navigation"
             >
               <ul className="px-4 py-4 flex flex-col gap-1">
@@ -151,7 +153,7 @@ export default function Navbar() {
                     <a
                       href={link.href}
                       onClick={(e) => handleNavClick(e, link.href)}
-                      className="flex items-center font-sans font-medium text-base text-slate-700 hover:text-purple-700 hover:bg-purple-50 px-4 py-3.5 rounded-xl transition-all duration-200 min-h-[44px]"
+                      className="flex items-center font-sans font-medium text-base text-slate-700 hover:text-brand-700 hover:bg-brand-50 px-4 py-3.5 rounded-xl transition-all duration-200 min-h-[44px]"
                     >
                       {link.label}
                     </a>
@@ -161,7 +163,7 @@ export default function Navbar() {
                   <a
                     href="#contact"
                     onClick={(e) => handleNavClick(e, '#contact')}
-                    className="flex items-center justify-center font-sans font-semibold text-base text-white bg-gradient-to-r from-purple-700 to-blue-600 px-4 py-3.5 rounded-xl transition-opacity duration-200 hover:opacity-90 min-h-[44px]"
+                    className="flex items-center justify-center font-sans font-semibold text-base text-white bg-gradient-to-r from-brand-700 to-accent-600 px-4 py-3.5 rounded-xl transition-opacity duration-200 hover:opacity-90 min-h-[44px]"
                   >
                     Get in Touch
                   </a>

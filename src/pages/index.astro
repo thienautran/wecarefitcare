@@ -3,7 +3,9 @@ import Layout from '~/layouts/Layout.astro';
 import Navbar from '~/components/wcfc/Navbar';
 import HeroCarousel from '~/components/wcfc/HeroCarousel';
 import AboutSection from '~/components/wcfc/AboutSection';
-import TeamSection from '~/components/wcfc/TeamSection';
+import ServicesSection from '~/components/wcfc/ServicesSection';
+import WhatYouGetSection from '~/components/wcfc/WhatYouGetSection';
+import TestimonialsSection from '~/components/wcfc/TestimonialsSection';
 import ContactSection from '~/components/wcfc/ContactSection';
 import Footer from '~/components/wcfc/Footer';
 
@@ -24,13 +26,19 @@ const metadata = {
     <!-- Hero section with carousel -->
     <HeroCarousel client:load />
 
-    <!-- About section -->
+    <!-- Who We Are section -->
     <AboutSection client:visible />
 
-    <!-- Meet the Team section -->
-    <TeamSection client:visible />
+    <!-- Our Services section -->
+    <ServicesSection client:visible />
 
-    <!-- Contact section -->
+    <!-- What You Get section -->
+    <WhatYouGetSection client:visible />
+
+    <!-- Testimonials section -->
+    <TestimonialsSection client:visible />
+
+    <!-- Contact Us section -->
     <ContactSection client:visible />
   </main>
 

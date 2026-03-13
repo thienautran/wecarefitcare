@@ -34,12 +34,12 @@ export default function TeamSection() {
           transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.6, ease: 'easeOut' }}
           className="text-center mb-12 sm:mb-16"
         >
-          <span className="inline-block font-sans text-xs font-semibold tracking-widest uppercase text-purple-600 mb-3">
+          <span className="inline-block font-sans text-xs font-semibold tracking-widest uppercase text-brand-600 mb-3">
             The Team
           </span>
           <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-slate-900 mb-4 leading-tight">
             Meet the People{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-700 to-blue-600">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-700 to-accent-600">
               Behind WCFC
             </span>
           </h2>
@@ -52,9 +52,9 @@ export default function TeamSection() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 max-w-3xl mx-auto">
           {TEAM_MEMBERS.map((member, i) => (
             <FadeIn key={member.name} delay={i * 0.15} className="h-full">
-              <article className="flex flex-col rounded-3xl overflow-hidden bg-white border border-purple-100 shadow-sm hover:shadow-md hover:border-purple-200 transition-all duration-300 h-full">
+              <article className="flex flex-col rounded-3xl overflow-hidden bg-white border border-brand-100 shadow-sm hover:shadow-md hover:border-brand-200 transition-all duration-300 h-full">
                 {/* Photo */}
-                <div className="relative aspect-[4/3] overflow-hidden bg-gradient-to-br from-purple-100 to-blue-100">
+                <div className="relative aspect-[4/3] overflow-hidden bg-gradient-to-br from-brand-100 to-accent-100">
                   <img
                     src={member.image}
                     alt={member.alt}
@@ -72,7 +72,7 @@ export default function TeamSection() {
                 <div className="flex flex-col flex-1 p-5 sm:p-6">
                   <div className="mb-3">
                     <h3 className="font-heading font-bold text-xl text-slate-900">{member.name}</h3>
-                    <span className="inline-block mt-1 font-sans text-xs font-semibold tracking-wide uppercase text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600">
+                    <span className="inline-block mt-1 font-sans text-xs font-semibold tracking-wide uppercase text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-accent-600">
                       {member.role}
                     </span>
                   </div>

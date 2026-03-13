@@ -9,16 +9,29 @@ export default {
       colors: {
         primary: 'var(--aw-color-primary)',
         secondary: 'var(--aw-color-secondary)',
-        accent: 'var(--aw-color-accent)',
         default: 'var(--aw-color-text-default)',
         muted: 'var(--aw-color-text-muted)',
-        // WCFC brand palette
-        wcfc: {
-          'purple-deep': 'var(--wcfc-purple-deep)',
-          'purple-mid': 'var(--wcfc-purple-mid)',
-          'purple-light': 'var(--wcfc-purple-light)',
-          'blue-mid': 'var(--wcfc-blue-mid)',
-          'blue-light': 'var(--wcfc-blue-light)',
+        brand: {
+          50: 'rgb(var(--wcfc-brand-50) / <alpha-value>)',
+          100: 'rgb(var(--wcfc-brand-100) / <alpha-value>)',
+          200: 'rgb(var(--wcfc-brand-200) / <alpha-value>)',
+          300: 'rgb(var(--wcfc-brand-300) / <alpha-value>)',
+          400: 'rgb(var(--wcfc-brand-400) / <alpha-value>)',
+          500: 'rgb(var(--wcfc-brand-500) / <alpha-value>)',
+          600: 'rgb(var(--wcfc-brand-600) / <alpha-value>)',
+          700: 'rgb(var(--wcfc-brand-700) / <alpha-value>)',
+          800: 'rgb(var(--wcfc-brand-800) / <alpha-value>)',
+        },
+        accent: {
+          DEFAULT: 'var(--aw-color-accent)',
+          50: 'rgb(var(--wcfc-accent-50) / <alpha-value>)',
+          100: 'rgb(var(--wcfc-accent-100) / <alpha-value>)',
+          200: 'rgb(var(--wcfc-accent-200) / <alpha-value>)',
+          300: 'rgb(var(--wcfc-accent-300) / <alpha-value>)',
+          400: 'rgb(var(--wcfc-accent-400) / <alpha-value>)',
+          500: 'rgb(var(--wcfc-accent-500) / <alpha-value>)',
+          600: 'rgb(var(--wcfc-accent-600) / <alpha-value>)',
+          700: 'rgb(var(--wcfc-accent-700) / <alpha-value>)',
         },
       },
       fontFamily: {
