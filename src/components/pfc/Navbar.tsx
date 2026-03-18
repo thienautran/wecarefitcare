@@ -51,7 +51,7 @@ export default function Navbar() {
 
   return (
     <header
-      id="wcfc-header"
+      id="pfc-header"
       className={[
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
         scrolled ? 'bg-white/95 backdrop-blur-md shadow-sm shadow-brand-100' : 'bg-transparent',
@@ -64,10 +64,10 @@ export default function Navbar() {
             href="#home"
             onClick={(e) => handleNavClick(e, '#home')}
             className="flex items-center gap-2 group"
-            aria-label="We Care Fit Care - Home"
+            aria-label="Project Fitcare - Home"
           >
             <span className="font-heading font-extrabold text-2xl sm:text-3xl tracking-tight bg-gradient-to-r from-brand-700 to-accent-600 bg-clip-text text-transparent leading-none">
-              WCFC
+              PFC
             </span>
           </a>
 

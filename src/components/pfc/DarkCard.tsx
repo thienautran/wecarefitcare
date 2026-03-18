@@ -1,5 +1,4 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import type { IconDefinition } from '@fortawesome/fontawesome-svg-core';
+import type { IconType } from 'react-icons';
 
 /* ─── Color variants using design-system tokens ─── */
 
@@ -9,28 +8,28 @@ const COLOR_MAP = {
     glowBg: 'bg-brand-500/15',
     glowRing: 'border-brand-400/25',
     hoverBorder: 'group-hover:border-brand-400/40',
-    hoverGlow: 'group-hover:shadow-[0_0_24px_rgb(var(--wcfc-brand-500)/0.15)]',
+    hoverGlow: 'group-hover:shadow-[0_0_24px_rgb(var(--pfc-brand-500)/0.15)]',
   },
   accent: {
     iconText: 'text-accent-400',
     glowBg: 'bg-accent-500/15',
     glowRing: 'border-accent-400/25',
     hoverBorder: 'group-hover:border-accent-400/40',
-    hoverGlow: 'group-hover:shadow-[0_0_24px_rgb(var(--wcfc-accent-500)/0.15)]',
+    hoverGlow: 'group-hover:shadow-[0_0_24px_rgb(var(--pfc-accent-500)/0.15)]',
   },
   purple: {
     iconText: 'text-brand-300',
     glowBg: 'bg-brand-400/15',
     glowRing: 'border-brand-300/25',
     hoverBorder: 'group-hover:border-brand-300/40',
-    hoverGlow: 'group-hover:shadow-[0_0_24px_rgb(var(--wcfc-brand-400)/0.15)]',
+    hoverGlow: 'group-hover:shadow-[0_0_24px_rgb(var(--pfc-brand-400)/0.15)]',
   },
   sky: {
     iconText: 'text-accent-300',
     glowBg: 'bg-accent-400/15',
     glowRing: 'border-accent-300/25',
     hoverBorder: 'group-hover:border-accent-300/40',
-    hoverGlow: 'group-hover:shadow-[0_0_24px_rgb(var(--wcfc-accent-400)/0.15)]',
+    hoverGlow: 'group-hover:shadow-[0_0_24px_rgb(var(--pfc-accent-400)/0.15)]',
   },
 } as const;
 
@@ -45,7 +44,7 @@ interface DarkCardBaseProps {
 }
 
 interface DarkCardIconProps extends DarkCardBaseProps {
-  icon: IconDefinition;
+  icon: IconType;
   emoji?: never;
 }
 
@@ -58,7 +57,7 @@ export type DarkCardProps = DarkCardIconProps | DarkCardEmojiProps;
 
 /* ─── Component ─── */
 
-export function DarkCard({ title, description, color = 'brand', icon, emoji }: DarkCardProps) {
+export function DarkCard({ title, description, color = 'brand', icon: Icon, emoji }: DarkCardProps) {
   const c = COLOR_MAP[color];
 
   return (
@@ -75,8 +74,8 @@ export function DarkCard({ title, description, color = 'brand', icon, emoji }: D
           <div
             className={`relative w-14 h-14 rounded-2xl ${c.glowBg} border ${c.glowRing} flex items-center justify-center transition-all duration-300 group-hover:scale-110`}
           >
-            {icon ? (
-              <FontAwesomeIcon icon={icon} className={`w-6 h-6 ${c.iconText}`} />
+            {Icon ? (
+              <Icon className={`w-6 h-6 ${c.iconText}`} />
             ) : (
               <span className="text-2xl leading-none">{emoji}</span>
             )}

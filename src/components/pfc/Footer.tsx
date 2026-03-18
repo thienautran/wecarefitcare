@@ -1,11 +1,10 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebookF, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { SiFacebook, SiInstagram, SiYoutube } from 'react-icons/si';
 import { SOCIAL_LINKS, SITE_NAME, COPYRIGHT_YEAR } from '../../config/site';
 
 const FOOTER_SOCIALS = [
-  { label: 'Facebook', href: SOCIAL_LINKS.facebook, icon: faFacebookF },
-  { label: 'Instagram', href: SOCIAL_LINKS.instagram, icon: faInstagram },
-  { label: 'YouTube', href: SOCIAL_LINKS.youtube, icon: faYoutube },
+  { label: 'Facebook', href: SOCIAL_LINKS.facebook, icon: SiFacebook },
+  { label: 'Instagram', href: SOCIAL_LINKS.instagram, icon: SiInstagram },
+  { label: 'YouTube', href: SOCIAL_LINKS.youtube, icon: SiYoutube },
 ];
 
 const FOOTER_LINKS = [
@@ -37,10 +36,10 @@ export default function Footer() {
           {/* Logo & tagline */}
           <div className="md:col-span-4 flex flex-col items-center md:items-start">
             <span className="font-heading font-extrabold text-3xl tracking-tight bg-gradient-to-r from-brand-400 to-accent-400 bg-clip-text text-transparent">
-              WCFC
+              PFC
             </span>
             <p className="mt-2 font-sans text-sm text-slate-400 leading-relaxed max-w-xs text-center md:text-left">
-              We Care Fit Care — empowering your wellness journey with expert guidance and genuine support.
+              Project Fitcare — empowering your wellness journey with expert guidance and genuine support.
             </p>
           </div>
 
@@ -71,16 +70,16 @@ export default function Footer() {
               Follow Us
             </h3>
             <div className="flex items-center gap-3">
-              {FOOTER_SOCIALS.map(({ label, href, icon }) => (
+              {FOOTER_SOCIALS.map(({ label, href, icon: Icon }) => (
                 <a
                   key={label}
                   href={href}
-                  aria-label={`We Care Fit Care on ${label}`}
+                  aria-label={`Project Fitcare on ${label}`}
                   rel="noopener noreferrer"
                   target="_blank"
                   className="inline-flex items-center justify-center h-10 w-10 rounded-full border border-slate-700/60 text-slate-400 hover:border-brand-500 hover:text-brand-400 hover:bg-brand-500/10 transition-all duration-300"
                 >
-                  <FontAwesomeIcon icon={icon} className="h-4 w-4" />
+                  <Icon className="h-4 w-4" />
                 </a>
               ))}
             </div>

@@ -1,6 +1,6 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeartPulse, faPersonRunning, faPeopleArrows, faStethoscope } from '@fortawesome/free-solid-svg-icons';
-import type { IconDefinition } from '@fortawesome/fontawesome-svg-core';
+import type { IconType } from 'react-icons';
+import { LuHeartPulse, LuHandshake, LuStethoscope } from 'react-icons/lu';
+import { MdDirectionsRun } from 'react-icons/md';
 import { FadeIn } from './FadeIn';
 import { SectionHeading } from './SectionHeading';
 import { ClaimSessionDialog } from './ClaimSessionDialog';
@@ -16,7 +16,7 @@ const SERVICES_HEADING = {
 };
 
 interface ServiceData {
-  icon: IconDefinition;
+  icon: IconType;
   title: string;
   description: string;
   services: string[];
@@ -24,7 +24,7 @@ interface ServiceData {
 
 const SERVICES: ServiceData[] = [
   {
-    icon: faHeartPulse,
+    icon: LuHeartPulse,
     title: 'Physical Health',
     description:
       'Custom-designed and professionally guided programs built around your specific needs and goals. Each plan is tailored to deliver results in the most efficient way possible, while still allowing you to progress at a pace that feels right for you. Your journey, your goals, your pace.',
@@ -37,7 +37,7 @@ const SERVICES: ServiceData[] = [
     ],
   },
   {
-    icon: faPersonRunning,
+    icon: MdDirectionsRun,
     title: 'Sports & Fitness',
     description:
       "Martial arts? Surfing? Hiking? Learning footy? Fishing? Or maybe you're the next big Paralympian looking to build strength and conditioning for your sport. Whatever your goal, we're here to help you take the first step. With supportive coaching, tailored training, and a community that has your back, you'll gain the skills, confidence, and motivation to chase what excites you.",
@@ -48,7 +48,7 @@ const SERVICES: ServiceData[] = [
     ],
   },
   {
-    icon: faPeopleArrows,
+    icon: LuHandshake,
     title: 'Social & Community Participation',
     description:
       "Everyone deserves the opportunity to feel connected, included, and confident in their community. Our Social & Lifestyle supports are designed to help you stay active, build meaningful relationships, and take part in the activities that matter most to you. Whether it's exploring new hobbies, joining local clubs, or developing social confidence, we provide flexible support tailored to your interests, goals, and lifestyle.",
@@ -61,7 +61,7 @@ const SERVICES: ServiceData[] = [
     ],
   },
   {
-    icon: faStethoscope,
+    icon: LuStethoscope,
     title: 'Allied & Health Professional Support',
     description:
       'We can connect you with the right allied health and professional services to support your goals. Whether you need physiotherapy, occupational therapy, speech therapy, or other specialist support, we help link you to trusted providers and ensure your fitness and lifestyle plan complements the broader care you receive.',
@@ -88,7 +88,7 @@ function ServiceCard({ service, index }: ServiceCardProps) {
         {/* Icon inline with title */}
         <div className="flex items-center gap-3 sm:gap-4 mb-5">
           <div className="flex-shrink-0 w-10 h-10 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-gradient-to-br from-brand-50 to-accent-50 border border-brand-100 flex items-center justify-center">
-            <FontAwesomeIcon icon={service.icon} className="w-4 h-4 sm:w-6 sm:h-6 text-brand-600" />
+            <service.icon className="w-4 h-4 sm:w-6 sm:h-6 text-brand-600" />
           </div>
           <h3 className="font-heading font-bold text-base sm:text-2xl text-slate-800 min-w-0">
             {service.title}

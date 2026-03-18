@@ -1,18 +1,18 @@
 ---
 import Layout from '~/layouts/Layout.astro';
-import Navbar from '~/components/wcfc/Navbar';
-import HeroCarousel from '~/components/wcfc/HeroCarousel';
-import AboutSection from '~/components/wcfc/AboutSection';
-import ServicesSection from '~/components/wcfc/ServicesSection';
-import WhatYouGetSection from '~/components/wcfc/WhatYouGetSection';
-import TestimonialsSection from '~/components/wcfc/TestimonialsSection';
-import ContactSection from '~/components/wcfc/ContactSection';
-import Footer from '~/components/wcfc/Footer';
+import Navbar from '~/components/pfc/Navbar';
+import HeroCarousel from '~/components/pfc/HeroCarousel';
+import AboutSection from '~/components/pfc/AboutSection';
+import ServicesTabbedSection from '~/components/pfc/ServicesTabbedSection';
+import WhatYouGetSection from '~/components/pfc/WhatYouGetSection';
+import TestimonialsSection from '~/components/pfc/TestimonialsSection';
+import ContactSection from '~/components/pfc/ContactSection';
+import Footer from '~/components/pfc/Footer';
 
 const metadata = {
-  title: 'We Care Fit Care — NDIS Fitness Support',
+  title: 'Project Fitcare — NDIS Fitness Support',
   description:
-    'NDIS fitness and activity support that delivers real, tangible outcomes through practical hands-on care. We Care Fit Care helps you stay active, healthy, and independent.',
+    'NDIS fitness and activity support that delivers real, tangible outcomes through practical hands-on care. Project Fitcare helps you stay active, healthy, and independent.',
   ignoreTitleTemplate: true,
 };
 ---
@@ -30,7 +30,7 @@ const metadata = {
     <AboutSection client:visible />
 
     <!-- Our Services section -->
-    <ServicesSection client:visible />
+    <ServicesTabbedSection client:visible />
 
     <!-- What You Get section -->
     <WhatYouGetSection client:visible />

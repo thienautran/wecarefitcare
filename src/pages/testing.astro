@@ -1,0 +1,15 @@
+---
+import Layout from '~/layouts/Layout.astro';
+import ServicesTabbedSection from '~/components/pfc/ServicesTabbedSection';
+
+const metadata = {
+  title: 'Services — Project Fitcare',
+  description: 'Explore the four pillars of support we deliver — Physical Health, Sports & Fitness, Social & Community Participation, and Allied Health Professional Support.',
+};
+---
+
+<Layout metadata={metadata}>
+  <main class="pt-20">
+    <ServicesTabbedSection client:load />
+  </main>
+</Layout>

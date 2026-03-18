@@ -31,13 +31,13 @@ export default function ContactSection() {
            */}
           <iframe
             src={GOOGLE_FORM_URL}
-            title="We Care Fit Care Contact Form"
+            title="Project Fitcare Contact Form"
             width="100%"
             height="900"
             className="w-full border-0"
             loading="lazy"
             sandbox="allow-scripts allow-forms allow-same-origin allow-popups"
-            aria-label="Contact form — We Care Fit Care"
+            aria-label="Contact form — Project Fitcare"
           >
             <p className="p-6 font-sans text-slate-600">
               Loading form...{' '}
@@ -52,7 +52,7 @@ export default function ContactSection() {
         <p className="mt-4 text-center font-sans text-xs text-slate-400">
           Having trouble with the form?{' '}
           <a
-            href="mailto:hello@wecarefitcare.com.au"
+            href="mailto:hello@projectfitcare.com.au"
             className="text-brand-600 hover:text-brand-800 underline transition-colors"
           >
             Email us directly

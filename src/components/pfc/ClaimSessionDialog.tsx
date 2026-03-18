@@ -1,8 +1,7 @@
 import { useState } from 'react';
 import * as Dialog from '@radix-ui/react-dialog';
 import { AnimatePresence, motion } from 'motion/react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faXmark } from '@fortawesome/free-solid-svg-icons';
+import { LuX } from 'react-icons/lu';
 import { GOOGLE_FORM_URL } from '../../config/site';
 
 interface ClaimSessionDialogProps {
@@ -46,7 +45,7 @@ export function ClaimSessionDialog({ children, serviceTitle }: ClaimSessionDialo
                     aria-label="Close dialog"
                     role="button"
                   >
-                    <FontAwesomeIcon icon={faXmark} className="w-5 h-5" />
+                    <LuX className="w-5 h-5" />
                   </Dialog.Close>
                 </div>
 

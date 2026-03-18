@@ -7,14 +7,14 @@ const TEAM_MEMBERS = [
     name: 'Eamon Hibbins',
     role: 'CEO & Founder',
     image: 'https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=600&q=80&auto=format&fit=crop&crop=face',
-    alt: 'Eamon Hibbins, CEO of We Care Fit Care',
-    bio: "Eamon founded WCFC with one goal in mind: to deliver NDIS fitness support that's practical, honest, and actually makes a difference. With a background in exercise science and years of experience working alongside people with disability, Eamon leads by example — every approach WCFC uses is something he's tried and tested firsthand.",
+    alt: 'Eamon Hibbins, CEO of Project Fitcare',
+    bio: "Eamon founded Project Fitcare with one goal in mind: to deliver NDIS fitness support that's practical, honest, and actually makes a difference. With a background in exercise science and years of experience working alongside people with disability, Eamon leads by example — every approach Project Fitcare uses is something he's tried and tested firsthand.",
   },
   {
     name: 'Tommy Hibbins',
     role: 'Support Worker',
     image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&q=80&auto=format&fit=crop&crop=face',
-    alt: 'Tommy Hibbins, Support Worker at We Care Fit Care',
+    alt: 'Tommy Hibbins, Support Worker at Project Fitcare',
     bio: "Tommy brings energy, warmth, and a genuine love of movement to every session. Whether he's supporting a client through their first gym visit or joining them for an outdoor walk, Tommy brings consistency and care to everything he does. He believes fitness should be fun — and accessible to everyone.",
   },
 ];
@@ -40,7 +40,7 @@ export default function TeamSection() {
           <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-slate-900 mb-4 leading-tight">
             Meet the People{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-700 to-accent-600">
-              Behind WCFC
+              Behind Project Fitcare
             </span>
           </h2>
           <p className="font-sans text-base sm:text-lg text-slate-600 max-w-xl mx-auto leading-relaxed">

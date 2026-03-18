@@ -24,7 +24,7 @@ export function SectionHeading({ label, title, gradientText, subtitle, className
       <span className="inline-block font-sans text-xs font-semibold tracking-widest uppercase text-brand-600 mb-3">
         {label}
       </span>
-      <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-slate-900 mb-4 leading-tight">
+      <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-[2.75rem] text-slate-900 mb-4 leading-tight tracking-tight">
         {title}{' '}
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-700 to-accent-600">
           {gradientText}

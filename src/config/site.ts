@@ -1,5 +1,5 @@
 /**
- * WCFC Site Configuration
+ * PFC Site Configuration
  * Update these values to configure the site's external links and URLs.
  */
 
@@ -22,5 +22,5 @@ export const SOCIAL_LINKS = {
 // ============================================================
 // SITE INFO
 // ============================================================
-export const SITE_NAME = 'We Care Fit Care';
+export const SITE_NAME = 'Project Fitcare';
 export const COPYRIGHT_YEAR = '2026';

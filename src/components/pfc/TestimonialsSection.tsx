@@ -1,5 +1,4 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGoogle } from '@fortawesome/free-brands-svg-icons';
+import { SiGoogle } from 'react-icons/si';
 import { FadeIn } from './FadeIn';
 import { TestimonialCard } from './TestimonialCard';
 import { SectionHeading } from './SectionHeading';
@@ -23,7 +22,7 @@ const TESTIMONIALS = [
   },
   {
     name: 'Cameron',
-    text: "My loss of sight has been a blessing for me. Before I was an unfit office worker but now, unable to work, Wecarefitcare has transformed me into a confident, healthy and stronger individual. The support I've been given is amazing and I highly recommend the services of this carer. Thank you Tommy.",
+    text: "My loss of sight has been a blessing for me. Before I was an unfit office worker but now, unable to work, Project Fitcare has transformed me into a confident, healthy and stronger individual. The support I've been given is amazing and I highly recommend the services of this carer. Thank you Tommy.",
   },
   {
     name: 'Steph',
@@ -79,7 +78,7 @@ export default function TestimonialsSection() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-slate-200 bg-white text-sm font-sans font-medium text-slate-700 hover:border-brand-200 hover:text-brand-700 hover:shadow-sm transition-all duration-200"
             >
-              <FontAwesomeIcon icon={faGoogle} className="w-4 h-4" style={{ color: '#4285F4' }} />
+              <SiGoogle className="w-4 h-4" style={{ color: '#4285F4' }} />
               See more reviews on Google
             </a>
           </div>

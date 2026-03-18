@@ -1,20 +1,20 @@
 site:
-  name: We Care Fit Care
-  site: 'https://wecarefitcare.com.au'
+  name: Project Fitcare
+  site: 'https://projectfitcare.com.au'
   base: '/'
   trailingSlash: false
 
 # Default SEO metadata
 metadata:
   title:
-    default: We Care Fit Care
-    template: '%s — We Care Fit Care'
-  description: 'NDIS fitness support that delivers real, tangible outcomes through practical hands-on care. We Care Fit Care helps you stay active, healthy, and independent.'
+    default: Project Fitcare
+    template: '%s — Project Fitcare'
+  description: 'NDIS fitness support that delivers real, tangible outcomes through practical hands-on care. Project Fitcare helps you stay active, healthy, and independent.'
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: We Care Fit Care
+    site_name: Project Fitcare
     images:
       - url: '~/assets/images/default.png'
         width: 1200

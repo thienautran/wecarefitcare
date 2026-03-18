@@ -127,7 +127,7 @@ export default function WhatYouGetSection() {
       <div
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] rounded-full pointer-events-none"
         style={{
-          background: 'radial-gradient(ellipse at center, rgb(var(--wcfc-brand-700) / 0.1) 0%, transparent 70%)',
+          background: 'radial-gradient(ellipse at center, rgb(var(--pfc-brand-700) / 0.1) 0%, transparent 70%)',
         }}
       />
 
